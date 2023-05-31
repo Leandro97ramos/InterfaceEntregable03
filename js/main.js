@@ -26,7 +26,7 @@ document.addEventListener('keydown', () => {
   
     }
   
-    //si presiona el espacio salta dos veces
+    //si presiona el espacio salta mas alto
     else if (event.keyCode == 32) {
         runner.superSalto();
 
@@ -159,7 +159,6 @@ const colisionPlus = (statRunner) => {
 
 
 function gameLoop() {
-    // generarEnemigo();
     const statRunner = runner.status();
    
     colisionEnemy(statRunner);

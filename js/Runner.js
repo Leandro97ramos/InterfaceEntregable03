@@ -14,6 +14,7 @@ class Runner {
 
     smash() {
         this.clean();
+        colisionSound.play();
         this.personaje.classList.add("smash");
         
         this.personaje.addEventListener("animationend", () => {
