@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div id="home">
+
+
+
+
+        <div class="modal">
+            <div id="homePanelHowTo" class="keyTitle"><a href="./index.html">Go Menu</a></div>
+            <div class="cont">
+                <div class="key">
+                    <div class="keyTitle">Score</div>
+                    <div id="scr" class="keyDescription">+30</div>
+                </div>
+            </div>
+            <div class="key">
+                <div class="keyTitle"><a href="./game.html">Play again</a></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+<script>
+    let scr = document.getElementById("scr");
+    let score = localStorage.getItem("score");
+    scr.innerHTML = score;
+
+</script>
+
+</html>

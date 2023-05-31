@@ -1,0 +1,437 @@
+*{
+  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+  color: white; 
+}
+body {
+  margin: 0;
+  max-height: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.modal {
+ /*100% on page*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.keys{
+  margin-top: 50px;
+}
+
+.cont{
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 75px;
+}
+.algCenter{
+  text-align: center;
+}
+.key {
+ /*
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;*/
+}
+
+.keyTitle {
+
+  border-radius: 10px;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+.keyDescription {
+  width: 400px;
+  height: 100px;  
+  text-align: center;
+}
+
+
+#home {
+  background: url("../assets/bg/bg.png") repeat-x;
+  background-size: 1280px 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: jungle 15s linear infinite;
+
+}
+
+
+/*HomePanel in the box*/
+.box {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#homePanel {
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+#homePanelTitle {
+  font-size: 50px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 50px;
+}
+
+#homePanelPlay {
+  font-size: 30px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#homePanelHowTo {
+  font-size: 30px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+}
+
+
+#background,
+#piso,
+#game-container {
+  width: 100%;
+}
+
+#game-container {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#background {
+  height: 80%;
+  background: url("../assets/bg/bg.png") repeat-x;
+  background-size: 1280px 100%;
+  position: absolute;
+  animation: jungle 15s linear infinite;
+}
+
+
+
+#piso {
+  height: 33%;
+  background: url("../assets/bg/floor.png") repeat-x;
+  background-size: 831px 100%;
+  animation: floor 2s linear infinite;
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+}
+
+#lives {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  font-size: 30px;
+  color: white;
+  z-index: 2;
+}
+
+#score {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  z-index: 2;
+}
+
+#time{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 30px;
+  color: white;
+  z-index: 2;
+}
+#sound{
+  position: absolute;
+  top: 0;
+  left: 90%;
+  font-size: 30px;
+  background-size: 50px 50px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+.blow{
+  background: url("../assets/enemy/blow.png") no-repeat;
+  background-size: 100% 100%;
+  animation: blow 1s steps(10) forwards;
+}
+@keyframes blow {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+    /* Desplaza el fondo horizontalmente en su totalidad */
+  }
+
+}
+.mute{
+  background: url("../assets/sound/mute.png") no-repeat;
+  
+}
+.unmute{
+  background: url("../assets/sound/unmute.png") no-repeat;
+}
+@keyframes parallax {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+    /* Desplaza el fondo horizontalmente en su totalidad */
+  }
+}
+
+#character {
+  width: 70px;
+  height: 100px;
+  z-index: 1;
+  position: absolute;
+  bottom: 32%;
+  left: 100px;
+  background: url('../assets/player/koala01.png');
+  /* Ajusta la ruta a tu sprite del personaje */
+}
+
+@keyframes characterSpriteChange {
+  0% {
+    background-image: url('../assets/player/koala01.png');
+    /* Ajusta la ruta al primer sprite */
+  }
+
+  33.33% {
+    background-image: url('../assets/player/koala02.png');
+    /* Ajusta la ruta al segundo sprite */
+  }
+
+  66.67% {
+    background-image: url('../assets/player/koala03.png');
+    /* Ajusta la ruta al tercer sprite */
+  }
+
+  100% {
+    background-image: url('../assets/player/koala01.png');
+    /* Vuelve al primer sprite */
+  }
+}
+
+.correr {
+  animation: characterSpriteChange 0.8s steps(4) infinite;
+}
+
+.saltar {
+  animation: saltar 500ms cubic-bezier(0, 0, .5, 1) forwards;
+}
+
+.superSalto {
+  animation: superSalto 500ms cubic-bezier(0, 0, .5, 1) forwards;
+}
+
+.caer {
+  animation: caer 300ms cubic-bezier(0, 0, .5, 1) forwards;
+}
+#enemy{
+  position: absolute;
+  bottom: 33%;
+  left: 100%;
+  width: 128px;
+  height: 82px;
+  animation: enemigo 3s 1.5s forwards linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}
+.enemigo {
+  background-image: url('../assets/enemy/turtle01.png');
+}
+#fruit{
+  height: 100px;
+  width: 100px;
+  background: url("../assets/plus/food_cherry.png");
+}
+.fruit {
+  position: absolute;
+  left: 100%;
+  bottom: 76%;
+  animation: enemigo 10s 1.5s forwards linear;
+}
+
+#bomb{
+    height: 100px;
+  width: 100px;
+  background: url("../assets/plus/bomb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bomb {
+  position: absolute;
+  left: 100%;
+  bottom: 80%;
+  animation: enemigo 3s 1.5s forwards linear;
+}
+
+.hide {
+  display: none;
+}
+
+
+#game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.smash {
+  /* Estilos para indicar que el personaje fue golpeado */
+  animation: titilar 0.5s forwards;
+}
+
+@keyframes titilar {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes saltar {
+  from {
+    bottom: 33%;
+  }
+  
+  to {
+    bottom: 60%;
+  }
+}
+
+@keyframes superSalto {
+  from {
+    bottom: 33%;
+  }
+
+  to {
+    bottom: 80%;
+  }
+}
+
+@keyframes caer {
+  from {
+    bottom: 60%;
+
+  }
+
+  to {
+    bottom: 33%;
+  }
+}
+
+@keyframes correr {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: -1768px;
+    /* Desplaza el fondo horizontalmente en su totalidad */
+  }
+}
+
+@keyframes floor {
+  0% {
+    background-position: 831px;
+  }
+
+  100% {
+    background-position: 0;
+    /* Desplaza el fondo horizontalmente en su totalidad */
+  }
+}
+
+@keyframes jungle {
+  0% {
+    background-position: 1280px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+
+}
+
+@keyframes enemigo {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -10%;
+  }
+}
