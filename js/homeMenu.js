@@ -40,8 +40,8 @@ const templModal = () => {
 
     <div class="cont">
         <div class="key">
-            <img src="../assets/enemy/turtle01.png" width="100px" height="100px">
 
+            <div id="keyTurtle"></div>
             <div class="algCenter">-1Up</div>
         </div>
     
@@ -65,21 +65,21 @@ const eventModal = () => {
         document.getElementById("homePanelPlay").addEventListener("click", () => {
             window.location.href = "game.html";
         });
-        
+
     }
     document.getElementById("homePanelHowTo").addEventListener("click", () => {
         let menu = document.getElementById("home");
         if (document.querySelector(".box") != null) {
-          menu.innerHTML = '';
-          menu.innerHTML = templModal();      
-          // Asignar el evento de cierre del modal al botón correspondiente
+            menu.innerHTML = '';
+            menu.innerHTML = templModal();
+            // Asignar el evento de cierre del modal al botón correspondiente
         } else {
-          menu.innerHTML = '';
-          menu.innerHTML = templHomeMenu();
+            menu.innerHTML = '';
+            menu.innerHTML = templHomeMenu();
         }
-        
+
         eventModal();
-      });
+    });
 
 }
 eventModal();

@@ -324,6 +324,16 @@ body {
   animation: enemigo 3s 1.5s forwards linear;
 }
 
+
+#keyTurtle{
+  height: 100px;
+  width: 100px;
+  background: url("../assets/enemy/turtle01.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .hide {
   display: none;
 }
